@@ -19,6 +19,7 @@ function App() {
                     <Route path='/Reviews' component={Reviews} />
                     <Route path='/SignUp' component={SignUp} />
                 </Routes>
+                <Footer/>
             </Router>
         </>
     );
