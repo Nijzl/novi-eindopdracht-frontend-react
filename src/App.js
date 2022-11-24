@@ -1,12 +1,27 @@
 import React from 'react';
+import Navbar from './components/Navbar';
 import './App.css';
+import Home from './components/pages/Home';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Recipes from './components/pages/Recipes';
+import Reviews from './components/pages/Reviews';
+import SignUp from './components/pages/SignUp';
+import Footer from './components/Footer';
 
 function App() {
-  return (
-    <div className="App">
-      <h1>Test test</h1>
-    </div>
-  );
+    return (
+        <>
+            <Router>
+                <Navbar/>
+                <Routes>
+                    <Route path='/' exact component={Home} />
+                    <Route path='/Recipes' component={Recipes} />
+                    <Route path='/Reviews' component={Reviews} />
+                    <Route path='/SignUp' component={SignUp} />
+                </Routes>
+            </Router>
+        </>
+    );
 }
 
 export default App;
