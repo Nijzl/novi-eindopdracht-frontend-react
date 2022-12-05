@@ -70,8 +70,9 @@
     margin-bottom: 16px;
 }
 
-.footer-link-items > h2 {
+.footer-link-items > h2, h3 {
     color: #fff;
+    line-height: 25px;
 }
 
 .footer-link-items a {

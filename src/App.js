@@ -15,10 +15,11 @@ function App() {
                 <Navbar/>
                 <Routes>
                     <Route path='/' exact component={Home} />
-                    <Route path='/Recipes' component={Recipes} />
-                    <Route path='/Reviews' component={Reviews} />
-                    <Route path='/SignUp' component={SignUp} />
+                    <Route path='../components/pages/Recipes' component={Recipes} />
+                    <Route path='../components/pages/Reviews' component={Reviews} />
+                    <Route path='../components/pages/SignUp' component={SignUp} />
                 </Routes>
+                <Home/>
                 <Footer/>
             </Router>
         </>

@@ -1,6 +1,9 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Dit project is gemaakt als eindopdracht voor de leerlijn frontend, onderdeel van de HBO ICT Software Development zoals aangeboden door Novi Hogeschool. In overeenkomst met de best practices zal de rest van de ReadMe in het Engels zijn.<br>
+<br>
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). <br>
+You'll need a working internet connection to fully enjoy the app's functionalities.
 
 ## Available Scripts
 
