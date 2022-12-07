@@ -38,10 +38,10 @@ function Footer() {
                 <div className='footer-link-wrapper'>
                     <div class='footer-link-items'>
                         <h2>Social Media</h2>
-                        <a href = "www.instagram.com">Instagram</a>
-                        <a href = "www.facebook.com">Facebook</a>
-                        <a href = "www.youtube.com">Youtube</a>
-                        <a href = "www.twitter.com">Twitter</a>
+                        <a href = "https://instagram.com">Instagram</a>
+                        <a href = "https://facebook.com">Facebook</a>
+                        <a href = "https://youtube.com">Youtube</a>
+                        <a href = "https://twitter.com">Twitter</a>
                     </div>
                 </div>
             </div>

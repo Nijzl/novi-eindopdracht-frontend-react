@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Recipes from './pages/Recipes';
 import Reviews from './pages/Reviews';
+import Login from './pages/Login';
 import Register from './pages/Register';
 import Footer from './components/Footer';
 
@@ -14,10 +15,11 @@ function App() {
             <Router>
                 <Navbar/>
                 <Routes>
-                    <Route path='/' exact component={Home} />
-                    <Route path='../components/pages/Recipes' component={Recipes} />
-                    <Route path='../components/pages/Reviews' component={Reviews} />
-                    <Route path='../components/pages/Register' component={Register} />
+                    <Route path='/' exact element = {Home} />
+                    <Route path='../pages/Recipes' element = { Recipes } />
+                    <Route path='../pages/Reviews' element = { Reviews } />
+                    <Route path='../pages/Login' element = { Login }/>
+                    <Route path='../pages/Register' element = { Register } />
                 </Routes>
                 <Home/>
                 <Footer/>
