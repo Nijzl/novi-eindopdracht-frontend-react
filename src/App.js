@@ -1,11 +1,11 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import './App.css';
-import Home from './components/pages/Home';
+import Home from './pages/Home';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Recipes from './components/pages/Recipes';
-import Reviews from './components/pages/Reviews';
-import Register from './components/pages/Register';
+import Recipes from './pages/Recipes';
+import Reviews from './pages/Reviews';
+import Register from './pages/Register';
 import Footer from './components/Footer';
 
 function App() {
