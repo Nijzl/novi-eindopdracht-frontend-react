@@ -5,7 +5,7 @@ import Home from './components/pages/Home';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Recipes from './components/pages/Recipes';
 import Reviews from './components/pages/Reviews';
-import SignUp from './components/pages/SignUp';
+import Register from './components/pages/Register';
 import Footer from './components/Footer';
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
                     <Route path='/' exact component={Home} />
                     <Route path='../components/pages/Recipes' component={Recipes} />
                     <Route path='../components/pages/Reviews' component={Reviews} />
-                    <Route path='../components/pages/SignUp' component={SignUp} />
+                    <Route path='../components/pages/Register' component={Register} />
                 </Routes>
                 <Home/>
                 <Footer/>
