@@ -9,16 +9,15 @@ function EndStat({ label, value }){
     );
 }
 
-function EndScreen({ score, bestScore }){
+function EndScreen({ score, bestScore, onRetryClick }){
 
     return(
         <div className="end-screen">
             <h1> Quiz Completed! </h1>
             <EndStat label="Score" value={ score }/>
             <EndStat label="Highscore" value={ bestScore }/>
-            <button className="end-screen__button"> Retry </button>
+            <button className="end-screen__button" onClick={onRetryClick}> Retry </button>
         </div>
-
     );
 }
 

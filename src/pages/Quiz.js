@@ -19,12 +19,25 @@ function Quiz(){
     const triviaQuestion = triviaData[triviaIndex];
     const {correct_answer, incorrect_answers, question} = triviaQuestion;
 
+    const onRestartGame = () => {
+        setGameState({
+            score: 0,
+            triviaIndex: 0,
+            isGameOver: false
+        })
+    };
+
+    let pageContent;
+    if(isGameOver){
+        pageContent = <EndScreen score={ score } bestScore={0} onRetryClick={ onRestartGame() } />;
+    } else{
+            pageContent = <TriviaItem/>;
+        }
 
     return(
         <>
             <QuizStats score={ score } questionNumber={ questionNumber } totalQuestions={ numQuestions }/>
-            <TriviaItem/>
-            <EndScreen score={ score } bestScore={0}/>
+            { pageContent }
         </>
     );
 }
