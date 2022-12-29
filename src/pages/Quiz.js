@@ -16,10 +16,7 @@ function Quiz(){
     const questionNumber = triviaIndex + 1;
     const numQuestions = triviaData.length;
 
-    const triviaQuestion = triviaData[triviaIndex];
-    const {correct_answer, incorrect_answers, question} = triviaQuestion;
-
-    const onRestartGame = () => {
+    const restartGame = () => {
         setGameState({
             score: 0,
             triviaIndex: 0,
@@ -27,11 +24,26 @@ function Quiz(){
         })
     };
 
+    const loadNextQuestion = () => {
+        /*Using spread operator to cupy the gameState and override the triviaIndex*/
+        setGameState({
+            ...gameState,
+            triviaIndex: triviaIndex + 1
+        })
+    };
+
     let pageContent;
     if(isGameOver){
-        pageContent = <EndScreen score={ score } bestScore={0} onRetryClick={ onRestartGame() } />;
+        pageContent = <EndScreen score={ score } bestScore={0} onRetryClick={ restartGame() } />;
     } else{
-            pageContent = <TriviaItem/>;
+        const triviaQuestion = triviaData[triviaIndex];
+        const {correct_answer, incorrect_answers, question} = triviaQuestion;
+        pageContent = <TriviaItem
+            question={ question }
+            correctAnswer={ correct_answer }
+            incorrectAnswers={ incorrect_answers}
+            onNextClick={ loadNextQuestion }
+        />;
         }
 
     return(
