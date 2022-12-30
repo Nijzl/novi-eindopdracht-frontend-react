@@ -1,36 +1,50 @@
+import {useEffect, useState} from "react";
 import { db } from "../../data/Firebase";
+import LoadingSpinner from "../LoadingSpinner";
+import errorMessage from "../ErrorMessage";
+import ErrorMessage from "../ErrorMessage";
+import User from "./user";
 
-function GetAllUsers(){
+function GetAllUsers() {
+    const [queryState, setQueryState] = useState({
+        isLoading: true,
+        errorMessage: "",
+        docSnapshots: null,
+    });
 
-    const onClick = async () => {
-        try {
-            const snapshot = await db.collection("users").where("isOnline", "==", true).get();
-            console.log(`Found ${snapshot.size}x user(s).`);
-            const docs = snapshot.docs;
-            docs.forEach((docSnapshot) => {
-
-                // Challenge:
-                const id = docSnapshot.id;
-                const data = docSnapshot.data();
-                const { firstName, lastName, highScore } = data;
-                console.log(`
-                User with ID: ${id}
-                ---
-                Name: ${firstName} ${lastName}
-                High score: ${highScore}
-                `);
-            });
-        } catch (err) {
-            console.error(err);
+    useEffect(() => {
+        async function getAllUsers() {
+            try {
+                setQueryState({ isLoading: true, errorMessage: "", docSnapshots: null });
+                const snapshot = await db.collection("users").get();
+                const docSnapshots = snapshot.docs;
+                setQueryState({ isLoading: false, errorMessage: "", docSnapshots });
+            } catch (err) {
+                setQueryState({
+                    isLoading: false,
+                    errorMessage: "Could not connect to database. Please try again.",
+                    docSnapshots: null,
+                });
+                console.error(err);
+            }
         }
-    }
 
-    return(
+        getAllUsers();
+    }, []);
+
+    const { isLoading, errorMessage, docSnapshots } = queryState;
+
+    let contents;
+    if (isLoading) contents = <LoadingSpinner />;
+    else if (errorMessage) contents = <ErrorMessage>{errorMessage}</ErrorMessage>;
+    else contents = docSnapshots.map((doc) => <User key={doc.id} data={doc.data()} />);
+
+    return (
         <div>
-            <h3> See users: </h3>
-            <button onClick={ onClick }> read users </button>
+            <h3>Read All Users</h3>
+            {contents}
         </div>
     );
-};
+}
 
 export default GetAllUsers;
