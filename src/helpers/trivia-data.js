@@ -1,3 +1,5 @@
+import he from "he";
+
 // This will eventually come from a server
 let triviaData = [
     {
@@ -88,5 +90,15 @@ let triviaData = [
         incorrect_answers: ["207", "197", "177"],
     },
 ];
+
+/*DECODES THE HTML ELEMENTS IN THE QUESTION AND ANSWERS*/
+triviaData = triviaData.map((item) =>{
+    return{
+        ...item,
+        question: he.decode(item.question),
+        correct_answer: he.decode(item.correct_answer),
+        incorrect_answers: item.incorrect_answers.map(incorrect => he.decode(incorrect))
+    };
+})
 
 export default triviaData;
