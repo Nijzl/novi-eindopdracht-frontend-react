@@ -5,7 +5,7 @@ import { useState } from "react";
 import triviaData from "../helpers/trivia-data";
 import { FadeTransition, FadeWrapper } from "../components/utils/fade-transition";
 
-function Quiz(){
+function Quiz({ triviaData }){
 
     const [gameState, setGameState] = useState({
         score: 0,

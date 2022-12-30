@@ -91,7 +91,7 @@ let triviaData = [
     },
 ];
 
-/*DECODES THE HTML ELEMENTS IN THE QUESTION AND ANSWERS*/
+/*/!*DECODES THE HTML ELEMENTS IN THE QUESTION AND ANSWERS*!/
 triviaData = triviaData.map((item) =>{
     return{
         ...item,
@@ -99,6 +99,6 @@ triviaData = triviaData.map((item) =>{
         correct_answer: he.decode(item.correct_answer),
         incorrect_answers: item.incorrect_answers.map(incorrect => he.decode(incorrect))
     };
-})
+})*/
 
 export default triviaData;
