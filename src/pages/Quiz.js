@@ -65,22 +65,25 @@ function Quiz(){
         const { correct_answer, incorrect_answers, question, difficulty } = triviaQuestion;
         pageContent = (
             <TriviaItem
-                key={triviaIndex}
-                question={question}
-                difficulty={difficulty}
-                correctAnswer={correct_answer}
-                incorrectAnswers={incorrect_answers}
-                onNextClick={loadNextQuestion}
-                onAnswerSelected={onAnswerSelected}
+                key={ triviaIndex }
+                question={ question }
+                difficulty={ difficulty }
+                correctAnswer={ correct_answer }
+                incorrectAnswers={ incorrect_answers }
+                onNextClick={ loadNextQuestion }
+                onAnswerSelected={ onAnswerSelected }
             />
         );
     }
 
     return (
         <>
-            <QuizStats score={score} questionNumber={questionNumber} totalQuestions={numQuestions} />
+            <QuizStats
+                score={ score }
+                questionNumber={ questionNumber }
+                totalQuestions={ numQuestions } />
             <FadeWrapper>
-                <FadeTransition key={pageKey}>{pageContent}</FadeTransition>
+                <FadeTransition key={ pageKey }> { pageContent } </FadeTransition>
             </FadeWrapper>
         </>
     );

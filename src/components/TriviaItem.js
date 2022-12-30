@@ -55,14 +55,20 @@ function TriviaItem({
 
                     return (
                         <li key={ answer }>
-                            <button className={ className } onClick={ onAnswerClick } disabled={ hasPickedAnswer }>
+                            <button
+                                className={ className }
+                                onClick={ onAnswerClick }
+                                disabled={ hasPickedAnswer }>
                                 { answer }
                             </button>
                         </li>
                     );
                 })}
             </ul>
-            <button className={ nextButtonClassName } onClick={ onNextClick } disabled={ !hasPickedAnswer }>
+            <button
+                className={ nextButtonClassName }
+                onClick={ onNextClick }
+                disabled={ !hasPickedAnswer }>
                 Next ➡
             </button>
         </div>

@@ -12,7 +12,7 @@ function FadeTransition({ children }) {
             exit={{ opacity: 0, x: -75, transition: { ease: "easeIn" } }}
             transition={{ duration: 0.5 }}
         >
-            {children}
+            { children }
         </motion.div>
     );
 }
