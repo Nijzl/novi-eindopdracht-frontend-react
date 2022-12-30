@@ -53,10 +53,10 @@ function Quiz({ triviaData }){
         pageKey = "EndScreen";
         pageContent = (
             <EndScreen
-                score={score}
-                bestScore={0}
-                onRetryClick={restartGame}
-                playTime={playTimeInSeconds}
+                score={ score }
+                bestScore={ 0 }
+                onRetryClick={ restartGame }
+                playTime={ playTimeInSeconds }
             />
         );
     } else {

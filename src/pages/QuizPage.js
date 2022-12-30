@@ -1,7 +1,7 @@
 import Quiz from "./Quiz";
 import LoadingSpinner from "../components/LoadingSpinner";
 import ErrorMessage from "../components/ErrorMessage";
-import useGetTriviaData from "../helpers/use-get-trivia-data";
+import useGetTriviaData from "../components/hooks/use-get-trivia-data";
 
 function QuizPage(){
 
