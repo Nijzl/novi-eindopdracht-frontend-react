@@ -6,8 +6,18 @@ import DemoPage from "./pages/DemoPage";
 import HomePage from "./pages/HomePage";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import useUser from "./data/hooks/use-user";
+import useUser, { UserProvider } from "./data/hooks/use-user";
 import LoadingSpinner from "./components/LoadingSpinner";
+
+function ProviderWrappedApp() {
+    return (
+        <Router>
+            <UserProvider>
+                <App />
+            </UserProvider>
+        </Router>
+    );
+}
 
 function App() {
 
@@ -15,8 +25,8 @@ function App() {
 
     return(
         <>
-          <Router>
               <Header/>
+
               { userState.isLoading ? (
                   <LoadingSpinner/>
               ) : (
@@ -27,10 +37,10 @@ function App() {
                       <Route path="/demo" element={ <DemoPage/> } />
                   </Routes>
               )}
+
               <Footer/>
-          </Router>
         </>
     );
 }
 
-export default App;
+export default ProviderWrappedApp;

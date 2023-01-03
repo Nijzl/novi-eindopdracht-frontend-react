@@ -1,29 +1,30 @@
-import {useEffect, useState} from "react";
+import { useEffect, useState, createContext, useContext } from "react";
 import { auth, provider } from "../Firebase";
 
-function useUser() {
-
+function useUserInternal() {
     const [userState, setUserState] = useState({
         user: auth.currentUser,
         isLoading: auth.currentUser === null ? true : false,
         error: null,
     });
-
     const { user, isLoading, error } = userState;
     const isSignedIn = user !== null;
     const userId = isSignedIn ? user.uid : undefined;
 
     useEffect(() => {
-       const onChange = (currentUser) => {
-           setUserState({ user: currentUser, isLoading: false, error: null });
-       };
-       const onError = (error) => {
-           console.error(error);
-           setUserState( { user: null, isLoading: false, error });
-       };
-       const unsubscribe =  auth.onAuthStateChanged(onChange, onError);
 
-       return unsubscribe;
+        const onChange = (currentUser) => {
+            setUserState({ user: currentUser, isLoading: false, error: null });
+        };
+
+        const onError = (error) => {
+            console.error(error);
+            setUserState({ user: null, isLoading: false, error });
+        };
+
+        const unsubscribe = auth.onAuthStateChanged(onChange, onError);
+
+        return unsubscribe;
     }, []);
 
     const signIn = async () => {
@@ -59,4 +60,22 @@ function useUser() {
     };
 }
 
+const UserContext = createContext(null);
+
+function UserProvider({ children }) {
+    const userState = useUserInternal();
+    return <UserContext.Provider value={ userState }> { children } </UserContext.Provider>;
+}
+
+function useUser() {
+    const userState = useContext(UserContext);
+    if (userState === null) {
+        throw new Error(
+            "useUser needs to have a UserProvider component as a parent in the React tree."
+        );
+    }
+    return userState;
+}
+
 export default useUser;
+export { UserContext, UserProvider };
