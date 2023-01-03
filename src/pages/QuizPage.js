@@ -3,7 +3,7 @@ import LoadingSpinner from "../components/LoadingSpinner";
 import ErrorMessage from "../components/ErrorMessage";
 import useGetTriviaData from "../components/hooks/use-get-trivia-data";
 
-function QuizPage(){
+function QuizPage() {
 
     const [isLoading, errorMessage, data] = useGetTriviaData(5, "easy");
 

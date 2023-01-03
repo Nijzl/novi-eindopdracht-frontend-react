@@ -2,8 +2,8 @@ import "../styles/TriviaItem.css";
 import shuffle from "./utils/shuffle";
 import { useState } from "react";
 import useSound from "use-sound";
-import correctSound from "../assets/sfx/Week 07_video21-react-quiz-game-8-solution_src_quiz_sfx_131660__bertrof__game-sound-correct.wav";
-import incorrectSound from "../assets/sfx/Week 07_video21-react-quiz-game-8-solution_src_quiz_sfx_131657__bertrof__game-sound-wrong.wav";
+import correctSound from "../assets/sfx/sound-correct.wav";
+import incorrectSound from "../assets/sfx/sound-wrong.wav";
 
 function TriviaItem({
                         correctAnswer,

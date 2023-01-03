@@ -1,7 +1,7 @@
 import {Link} from "react-router-dom";
 import "../styles/Header.css";
 
-function Header(){
+function Header() {
     return(
         <>
             <header className="page-header">

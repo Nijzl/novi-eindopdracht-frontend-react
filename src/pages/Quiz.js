@@ -2,10 +2,9 @@ import QuizStats from "../components/QuizStats";
 import TriviaItem from "../components/TriviaItem";
 import EndScreen from "../components/EndScreen";
 import { useState } from "react";
-import triviaData from "../helpers/trivia-data";
 import { FadeTransition, FadeWrapper } from "../components/utils/fade-transition";
 
-function Quiz({ triviaData }){
+function Quiz({ triviaData }) {
 
     const [gameState, setGameState] = useState({
         score: 0,

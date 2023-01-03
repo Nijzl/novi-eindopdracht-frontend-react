@@ -1,6 +1,6 @@
 import "../styles/Stats.css";
 
-function Stat({ label, value }){
+function Stat({ label, value }) {
     return(
         <ul className="stats">
             <li className="stats__stat-container">
