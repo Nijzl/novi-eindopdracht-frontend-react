@@ -64,6 +64,10 @@ const UserContext = createContext(null);
 
 function UserProvider({ children }) {
     const userState = useUserInternal();
+    /* CHECK IF PROVIDER IS MISSING BY COMPARING CONTEXT VALUE TO DEFAULT */
+    if (userState === null){
+        throw new Error("useUser needs to have a UserProvider component as a parent in the React tree")
+    };
     return <UserContext.Provider value={ userState }> { children } </UserContext.Provider>;
 }
 
