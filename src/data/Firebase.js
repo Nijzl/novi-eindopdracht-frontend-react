@@ -1,5 +1,6 @@
 import firebase from "firebase/app";
 import "firebase/firestore";
+import "firebase/auth";
 
 const firebaseConfig = {
     apiKey: "AIzaSyDrO-jq0mqbG-aHI1sL1ceeEVOKOnktAlE",
@@ -22,5 +23,8 @@ if (!firebaseConfig.appId) throw new Error("Missing firebase credential: appId")
 firebase.initializeApp(firebaseConfig);
 
 const db = firebase.firestore();
+const auth = firebase.auth();
+const provider = new firebase.auth.GoogleAuthProvider();
 
-export { db, firebase };
+
+export { db, auth, provider, firebase };

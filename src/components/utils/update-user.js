@@ -19,8 +19,7 @@ function UpdateUser() {
         <div>
             <h3> Update User </h3>
             <label>
-                User ID:
-                <input type="text" value={ userId } onChange={ (e) => setUserId(e.target.value) }/>
+                User ID: <input type="text" value={ userId } onChange={ (e) => setUserId(e.target.value) }/>
             </label>
             <label>
                 Is online?{ " " }
