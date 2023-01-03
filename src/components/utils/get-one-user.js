@@ -38,18 +38,18 @@ function GetOneUser() {
 
     let contents;
     if (isLoading) contents = <LoadingSpinner />;
-    else if (errorMessage) contents = <ErrorMessage>{errorMessage}</ErrorMessage>;
-    else if (docSnapshot === null) contents = <p>Search for a user to see results here.</p>;
-    else if (!docSnapshot.exists) contents = <p>No user found!</p>;
-    else contents = <User data={docSnapshot.data()} />;
+    else if (errorMessage) contents = <ErrorMessage> { errorMessage } </ErrorMessage>;
+    else if (docSnapshot === null) contents = <p> Search for a user to see results here. </p>;
+    else if (!docSnapshot.exists) contents = <p> No user found! </p>;
+    else contents = <User data={ docSnapshot.data() } />;
 
     return (
         <div>
             <h3>Get Specific User</h3>
             <label>
-                User ID: <input type="text" value={userId} onChange={(e) => setUserId(e.target.value)} />
+                User ID: <input type="text" value={ userId } onChange={ (e) => setUserId(e.target.value) } />
             </label>
-            <button onClick={onClick}>Get User</button>
+            <button onClick={ onClick }> Get User </button>
             {contents}
         </div>
     );
