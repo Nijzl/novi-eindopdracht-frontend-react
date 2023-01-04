@@ -29,7 +29,7 @@ function HomePage() {
 
     return (
         <main>
-            <h1>Welcome to Quizzer</h1>
+            <h1>Welcome to Quizzapp </h1>
             { userState.error && (
                 <ErrorMessage> Something went wrong logging you in. Please try again. </ErrorMessage>
             )}

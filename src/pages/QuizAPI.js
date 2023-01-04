@@ -4,7 +4,7 @@ import EndScreen from "../components/EndScreen";
 import { useState } from "react";
 import { FadeTransition, FadeWrapper } from "../components/utils/fade-transition";
 
-function Quiz({ triviaData }) {
+function QuizAPI({ triviaData }) {
 
     const [gameState, setGameState] = useState({
         score: 0,
@@ -88,4 +88,4 @@ function Quiz({ triviaData }) {
     );
 }
 
-export default Quiz;
+export default QuizAPI;
