@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 function EndStat({ label, value }) {
     return (
         <div className="end-screen__stat">
-            <div className="end-screen__stat-label">{label}</div>
-            <div className="end-screen__stat-value">{value}</div>
+            <div className="end-screen__stat-label"> { label } </div>
+            <div className="end-screen__stat-value"> { value } </div>
         </div>
     );
 }
@@ -17,7 +17,7 @@ function EndScreen({ score, bestScore, onRetryClick, playTime }) {
 
     return (
         <div className="end-screen">
-            <h1>Quiz Complete!</h1>
+            <h1> QUIZ COMPLETE! </h1>
             <motion.div
                 className="end-screen__trophy"
                 initial={{ rotate: 0, originX: 0.5, originY: 0.5 }}
