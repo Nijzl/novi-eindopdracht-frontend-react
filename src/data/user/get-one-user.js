@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { db } from "../../data/Firebase";
-import LoadingSpinner from "../LoadingSpinner";
-import ErrorMessage from "../ErrorMessage";
+import { db } from "../Firebase";
+import LoadingSpinner from "../../components/LoadingSpinner";
+import ErrorMessage from "../../components/ErrorMessage";
 import User from "./user";
 
 function GetOneUser() {

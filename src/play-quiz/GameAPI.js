@@ -1,10 +1,10 @@
-import QuizStats from "../components/QuizStats";
-import TriviaItem from "../components/TriviaItem";
-import EndScreen from "../components/EndScreen";
+import Stats from "./Stats";
+import TriviaItem from "./TriviaItem";
+import EndScreen from "./EndScreen";
 import { useState } from "react";
-import { FadeTransition, FadeWrapper } from "../components/utils/fade-transition";
+import { FadeTransition, FadeWrapper } from "./fade-transition";
 
-function QuizAPI({ triviaData }) {
+function Game({ triviaData }) {
 
     const [gameState, setGameState] = useState({
         score: 0,
@@ -77,7 +77,7 @@ function QuizAPI({ triviaData }) {
 
     return (
         <>
-            <QuizStats
+            <Stats
                 score={ score }
                 questionNumber={ questionNumber }
                 totalQuestions={ numQuestions } />
@@ -88,4 +88,4 @@ function QuizAPI({ triviaData }) {
     );
 }
 
-export default QuizAPI;
+export default Game;

@@ -3,7 +3,7 @@ import firebase from "firebase/app";
 const musicQuiz = {
     id: "6fOWwsNkRBHGYef28SJW",
     data: {
-        title: "Musical Quiz",
+        title: "Musical Game",
         description:
             'Think you know music? Check out these "easy" questions from the Open Trivia API. These have not been modified and are licensed under CC BY-SA.',
         difficulty: "easy",

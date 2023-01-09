@@ -82,4 +82,5 @@ function useUser() {
 }
 
 export default useUser;
+
 export { UserContext, UserProvider };

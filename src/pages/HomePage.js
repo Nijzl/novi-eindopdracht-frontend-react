@@ -1,5 +1,6 @@
 import ErrorMessage from "../components/ErrorMessage";
 import useUser from "../data/hooks/use-user";
+import {Link} from "react-router-dom";
 
 function HomePage() {
 
@@ -10,6 +11,9 @@ function HomePage() {
         contents = (
             <>
                 <p>TODO: put the user's quizzes on this page.</p>
+                <Link to="quizzes/edit-quiz/new">
+                    <button> NEW QUIZ</button>
+                </Link>
                 <button onClick={ userState.signOut } disabled={ userState.isLoading }>
                     { userState.isLoading ? "SIGNING OUT..." : "SIGN OUT" }
                 </button>
@@ -29,7 +33,8 @@ function HomePage() {
 
     return (
         <main>
-            <h1>Welcome to Quizzapp </h1>
+            <h1>Welcome to Qui⚡︎⚡︎app </h1>
+            <h2> Your handy dandy quizz app </h2>
             { userState.error && (
                 <ErrorMessage> Something went wrong logging you in. Please try again. </ErrorMessage>
             )}

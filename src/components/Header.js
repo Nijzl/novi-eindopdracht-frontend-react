@@ -6,12 +6,12 @@ function Header() {
     return(
         <>
             <header className="page-header">
-                <span className="page-header__logo"> Quizzapp </span>
+                <span className="page-header__logo"> Qui⚡︎⚡︎app </span>
                 <nav>
                     <Link to="/"> HOME </Link> |
-                    <Link to="/quiz"> QUIZ </Link> |
-                    <Link to="/quizzes"> QUIZZES </Link> |
-                    <Link to="/demo"> PH1 </Link>
+                    <Link to="/quizzes"> QUIZ LIST </Link> |
+                    <Link to="/api"> API QUIZ </Link> |
+                    <Link to="/demo"> DEMO </Link>
                 </nav>
             </header>
         </>

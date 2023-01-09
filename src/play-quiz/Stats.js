@@ -11,7 +11,7 @@ function Stat({ label, value }) {
     );
 }
 
-function QuizStats({ score, questionNumber, totalQuestions }){
+function Stats({ score, questionNumber, totalQuestions }){
     return(
         <ul className="stats">
             <Stat label="Score" value={ score }/>
@@ -20,4 +20,4 @@ function QuizStats({ score, questionNumber, totalQuestions }){
     );
 }
 
-export default QuizStats;
+export default Stats;

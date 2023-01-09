@@ -1,8 +1,8 @@
-import GetAllUsers from "../components/utils/get-all-users";
-import GetOneUser from "../components/utils/get-one-user";
-import CreateNewUser from "../components/utils/create-new-user";
-import UpdateUser from "../components/utils/update-user";
-import DeleteUser from "../components/utils/delete-user";
+import GetAllUsers from "../data/user/get-all-users";
+import GetOneUser from "../data/user/get-one-user";
+import CreateNewUser from "../data/user/create-new-user";
+import UpdateUser from "../data/user/update-user";
+import DeleteUser from "../data/user/delete-user";
 
 function DemoPage() {
     return (

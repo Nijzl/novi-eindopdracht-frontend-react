@@ -1,5 +1,5 @@
 import "../styles/TriviaItem.css";
-import shuffle from "./utils/shuffle";
+import shuffle from "../components/utils/shuffle";
 import { useState } from "react";
 import useSound from "use-sound";
 import correctSound from "../assets/sfx/sound-correct.wav";

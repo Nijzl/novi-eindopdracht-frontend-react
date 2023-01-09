@@ -5,7 +5,7 @@ function QuizPreview({ id, data }) {
     let { title, tags, description, ownerName } = data;
 
     if (!tags) tags = [];
-    if (!title) title = "Untitled Quiz";
+    if (!title) title = "Untitled Game";
     if (!description) description = "No description provided.";
     if (!ownerName) ownerName = "Anonymous";
 

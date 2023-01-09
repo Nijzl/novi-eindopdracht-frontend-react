@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { db } from "../../data/Firebase";
+import { db } from "../Firebase";
 
 function CreateNewUser() {
     const [firstName, setFirstName] = useState("");

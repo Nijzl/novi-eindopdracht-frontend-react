@@ -1,11 +1,11 @@
 import "../styles/StartScreen.css";
-import ErrorMessage from "./ErrorMessage";
+import ErrorMessage from "../components/ErrorMessage";
 
 function StartScreen({ quizData, onPlayClick }) {
     let { title, tags, description, difficulty, ownerName, questions, lastModifiedAt } = quizData;
 
     if (!tags) tags = [];
-    if (!title) title = "Untitled Quiz";
+    if (!title) title = "Untitled Game";
     if (!description) description = "No description provided by the author.";
     if (!ownerName) ownerName = "Anonymous";
     if (!questions) questions = [];

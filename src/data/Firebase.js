@@ -26,4 +26,7 @@ const db = firebase.firestore();
 const auth = firebase.auth();
 const provider = new firebase.auth.GoogleAuthProvider();
 
-export { db, auth, provider, firebase };
+const getNewQuizId = () => db.collection("quizzes").doc().id;
+const getServerTimestamp = () => firebase.firestore.FieldValue.serverTimestamp();
+
+export { db, auth, provider, firebase, getNewQuizId, getServerTimestamp };

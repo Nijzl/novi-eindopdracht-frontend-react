@@ -1,8 +1,8 @@
 import {useEffect, useState} from "react";
-import { db } from "../../data/Firebase";
-import LoadingSpinner from "../LoadingSpinner";
-import errorMessage from "../ErrorMessage";
-import ErrorMessage from "../ErrorMessage";
+import { db } from "../Firebase";
+import LoadingSpinner from "../../components/LoadingSpinner";
+import errorMessage from "../../components/ErrorMessage";
+import ErrorMessage from "../../components/ErrorMessage";
 import User from "./user";
 
 function GetAllUsers() {

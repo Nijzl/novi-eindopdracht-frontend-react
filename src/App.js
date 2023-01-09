@@ -1,6 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import QuizPage from "./pages/QuizPage";
+import {BrowserRouter as Router, Routes, Route, Navigate} from "react-router-dom";
+import PlayQuizAPIPage from "./play-quiz/PlayQuizAPIPage";
 import AboutPage from "./pages/AboutPage";
 import DemoPage from "./pages/DemoPage";
 import HomePage from "./pages/HomePage";
@@ -10,6 +10,9 @@ import PageNotFound from "./pages/PageNotFound";
 import useUser, { UserProvider } from "./data/hooks/use-user";
 import LoadingSpinner from "./components/LoadingSpinner";
 import QuizzesPage from "./quizzes/QuizzesPage";
+import PlayQuizPage from "./play-quiz/PlayQuizPage";
+import AuthenticatedRoutes from "./components/AuthenticatedRoutes";
+import EditQuizPage from "./edit-quiz/EditQuizPage";
 
 function ProviderWrappedApp() {
     return (
@@ -34,8 +37,12 @@ function App() {
               ) : (
                   <Routes>
                       <Route path="/" exact element={ <HomePage/> } />
-                      <Route path="/quiz" element={ <QuizPage/> } />
                       <Route path="/quizzes" element={ <QuizzesPage/> } />
+                      <Route path="/quizzes/play-quiz/:id" element={ <PlayQuizPage/> } />
+                      <Route element={ <AuthenticatedRoutes/> }>
+                          <Route path={"/quizzes/edit-quiz/:id"} element={ <EditQuizPage/> } > </Route>
+                      </Route>
+                      <Route path="/api" element={ <PlayQuizAPIPage/> } />
                       <Route path="/about" element={ <AboutPage/> } />
                       <Route path="/demo" element={ <DemoPage/> } />
                       <Route path="*" element={ <PageNotFound/> } />
