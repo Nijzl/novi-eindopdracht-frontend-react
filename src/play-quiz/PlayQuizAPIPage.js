@@ -5,7 +5,7 @@ import useGetTriviaData from "../components/hooks/use-get-trivia-data";
 
 function PlayQuizAPIPage() {
 
-    const [isLoading, errorMessage, data] = useGetTriviaData(5, "easy");
+    const [isLoading, errorMessage, data] = useGetTriviaData(10, "");
 
     let contents;
     if (isLoading) contents = <LoadingSpinner/>;

@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
-import FlashcardList from "../components/FlashcardList";
+import FlashcardList from "./FlashcardList";
 import "../styles/Flashcards.css"
 import axios from 'axios';
-import { Link } from "react-router-dom";
 
 function Flashcards(){
 
@@ -42,7 +41,7 @@ function Flashcards(){
                     const answer = decodeString(questionItem.correct_answer)
                     const options = [...questionItem.incorrect_answers.map(a => decodeString(a)), answer]
                     return{
-                        id: `${index}-${Date.now()}`,
+                        id: `${ index }-${ Date.now() }`,
                         question: decodeString(questionItem.question),
                         answer: questionItem.correct_answer,
                         options: options.sort(() => Math.random() - 0.5)
@@ -57,18 +56,18 @@ function Flashcards(){
             <form className="header" onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label htmlFor="category"> Category </label>
-                    <select id="category" ref={categoryEl}>
-                        {categories.map(category => {
-                            return <option value={category.id} key={category.id}> {category.name} </option>
+                    <select id="category" ref={ categoryEl }>
+                        { categories.map(category => {
+                            return <option value={ category.id } key={ category.id }> { category.name } </option>
                         })}
                     </select>
                 </div>
                 <div className="form-group">
                     <label htmlFor="amount"> Number of Questions </label>
-                    <input type="number" id="amount" min="1" step="1" defaultValue={10} ref={amountEl}/>
+                    <input type="number" id="amount" min="1" step="1" defaultValue={ 10 } ref={ amountEl }/>
                 </div>
                 <div className="form-group">
-                    <button className='btns' buttonStyle='btn--outline' buttonSize='btn--medium'> Generate </button>
+                    <button> GENERATE </button>
                 </div>
             </form>
 

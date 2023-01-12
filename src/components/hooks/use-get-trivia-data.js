@@ -37,13 +37,9 @@ function useGetTriviaData(amount= 10, difficulty= ""){
     useEffect(() => {
         async function getQuiz(){
             try{
-                console.log("Fetching!")
-
                 const params = new URLSearchParams({ amount, type: "multiple" });
                 if (difficulty !== "") params.append("difficulty", difficulty);
-                const url = `https://opentdb.com/api.php?${params.toString()}`;
-
-                console.log(url);
+                const url = `https://opentdb.com/api.php?${ params.toString() }`;
 
                 const json = await fetchJson(url);
                 const { response_code, results } = json;
@@ -73,8 +69,6 @@ function useGetTriviaData(amount= 10, difficulty= ""){
         }
 
         getQuiz();
-
-        /* TO DO: CLEAN UP IF USER LEAVES PAGE BEFORE FETCH FINISHES RUNNING */
 
     }, [amount, difficulty]);
 

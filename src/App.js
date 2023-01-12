@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import PlayQuizAPIPage from "./play-quiz/PlayQuizAPIPage";
-import AboutPage from "./pages/AboutPage";
 import DemoPage from "./pages/DemoPage";
 import HomePage from "./pages/HomePage";
 import Header from "./components/Header";
@@ -13,7 +12,7 @@ import QuizzesPage from "./quizzes/QuizzesPage";
 import PlayQuizPage from "./play-quiz/PlayQuizPage";
 import AuthenticatedRoutes from "./components/AuthenticatedRoutes";
 import EditQuizPage from "./edit-quiz/EditQuizPage";
-import Flashcards from "./pages/Flashcards";
+import Flashcards from "./flashcards/Flashcards";
 
 function ProviderWrappedApp() {
     return (
