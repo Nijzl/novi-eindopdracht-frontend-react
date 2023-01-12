@@ -1,6 +1,6 @@
 import ErrorMessage from "../components/ErrorMessage";
 import useUser from "../data/hooks/use-user";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function HomePage() {
 
