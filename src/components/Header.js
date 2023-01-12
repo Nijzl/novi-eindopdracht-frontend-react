@@ -11,7 +11,7 @@ function Header() {
                     <Link to="/"> HOME </Link> |
                     <Link to="/quizzes"> QUIZ LIST </Link> |
                     <Link to="/api"> API QUIZ </Link> |
-                    <Link to="/demo"> DEMO </Link>
+                    <Link to="/flashcards"> FLASHCARDS </Link>
                 </nav>
             </header>
         </>

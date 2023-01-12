@@ -13,6 +13,7 @@ import QuizzesPage from "./quizzes/QuizzesPage";
 import PlayQuizPage from "./play-quiz/PlayQuizPage";
 import AuthenticatedRoutes from "./components/AuthenticatedRoutes";
 import EditQuizPage from "./edit-quiz/EditQuizPage";
+import Flashcards from "./pages/Flashcards";
 
 function ProviderWrappedApp() {
     return (
@@ -43,7 +44,7 @@ function App() {
                           <Route path={"/quizzes/edit-quiz/:id"} element={ <EditQuizPage/> } > </Route>
                       </Route>
                       <Route path="/api" element={ <PlayQuizAPIPage/> } />
-                      <Route path="/about" element={ <AboutPage/> } />
+                      <Route path="/flashcards" element={ <Flashcards/> } />
                       <Route path="/demo" element={ <DemoPage/> } />
                       <Route path="*" element={ <PageNotFound/> } />
                   </Routes>
