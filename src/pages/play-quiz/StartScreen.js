@@ -1,5 +1,5 @@
-import "../styles/StartScreen.css";
-import ErrorMessage from "../components/ErrorMessage";
+import "../../styles/StartScreen.css";
+import ErrorMessage from "../../components/ErrorMessage";
 
 function StartScreen({ quizData, onPlayClick }) {
     let { title, tags, description, difficulty, ownerName, questions, lastModifiedAt } = quizData;
@@ -30,7 +30,7 @@ function StartScreen({ quizData, onPlayClick }) {
             </ul>
             { !canPlay && <ErrorMessage> Cannot play this quiz - it has no questions yet! </ErrorMessage> }
             <button disabled={ !canPlay } onClick={ onPlayClick } className="start-screen__play-button">
-                Play
+                PLAY
             </button>
         </div>
     );

@@ -36,12 +36,11 @@ function Game({ triviaData }) {
         }
     };
 
-    const onAnswerSelected = (wasPlayerCorrect, difficulty) => {
-/*        const pointValue = convertDifficultyToPoints(difficulty);*/
+    const onAnswerSelected = (wasPlayerCorrect) => {
         if (wasPlayerCorrect) {
             setGameState({
                 ...gameState,
-                score: score + 1 /*pointValue*/,
+                score: score + 1,
             });
         }
     };
@@ -53,7 +52,7 @@ function Game({ triviaData }) {
         pageContent = (
             <EndScreen
                 score={ score }
-                bestScore={ 0 }
+                bestScore={ triviaIndex + 1 }
                 onRetryClick={ restartGame }
                 playTime={ playTimeInSeconds }
             />

@@ -1,5 +1,6 @@
-import "../styles/EndScreen.css";
+import "../../styles/EndScreen.css";
 import { motion } from "framer-motion";
+import {Link} from "react-router-dom";
 
 function EndStat({ label, value }) {
     return (
@@ -18,6 +19,7 @@ function EndScreen({ score, bestScore, onRetryClick, playTime }) {
     return (
         <div className="end-screen">
             <h1> QUIZ COMPLETE! </h1>
+
             <motion.div
                 className="end-screen__trophy"
                 initial={{ rotate: 0, originX: 0.5, originY: 0.5 }}
@@ -26,12 +28,21 @@ function EndScreen({ score, bestScore, onRetryClick, playTime }) {
             >
                 🏆
             </motion.div>
+
             <EndStat label="Score" value={ score } />
             <EndStat label="Best Score" value={ bestScore } />
             <EndStat label="Time to Complete" value={ timeString } />
-            <button className="end-screen__button" onClick={ onRetryClick }>
-                Retry?
-            </button>
+
+            <div>
+                <button className="end-screen__button" onClick={ onRetryClick }>
+                    RETRY
+                </button>
+            </div>
+            <div>
+                <Link to="/">
+                    <button className="end-screen__button"> HOME </button>
+                </Link>
+            </div>
         </div>
     );
 }

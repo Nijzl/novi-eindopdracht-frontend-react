@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../styles/QuizPreview.css";
+import "../../styles/QuizPreview.css";
 
 function QuizPreview({ id, data }) {
     let { title, tags, description, ownerName } = data;
@@ -22,7 +22,7 @@ function QuizPreview({ id, data }) {
             <div className="quiz-preview__author"> By: { ownerName } </div>
             <p className="quiz-preview__description"> { description } </p>
             <Link to={ `play-quiz/${ id } ` } className="quiz-preview__play">
-                <button> Play </button>
+                <button> PLAY </button>
             </Link>
         </article>
     );

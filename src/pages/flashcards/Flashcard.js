@@ -22,20 +22,20 @@ export default function Flashcard( { flashcard } ) {
 
     return(
         <div
-            className={`card ${flip ? 'flip' : ''}`}
-            onClick={() => setFlip(!flip)}
-            style={{ height : height }}
+            className={`card ${ flip ? 'flip' : '' }`}
+            onClick={ () => setFlip(!flip) }
+            style={ { height : height } }
         >
             <div className="front" ref={frontEl}>
-                {flashcard.question};
+                { flashcard.question };
                 <div className="flashcard-options">
-                    {flashcard.options.map(option => {
-                        return <div className="flashcard-option" key={option}>{option}</div>
+                    { flashcard.options.map(option => {
+                        return <div className="flashcard-option" key={ option }> { option } </div>
                     })}
                 </div>
             </div>
-            <div className="back" ref={backEl}>
-                {flashcard.answer}
+            <div className="back" ref={ backEl }>
+                { flashcard.answer }
             </div>
         </div>
     )

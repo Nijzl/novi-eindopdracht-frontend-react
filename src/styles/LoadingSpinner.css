@@ -1,6 +1,7 @@
 .loading-spinner {
     text-align: center;
     position: relative;
+    margin-top: 1rem;
 }
 
 .loading-spinner__spinner {

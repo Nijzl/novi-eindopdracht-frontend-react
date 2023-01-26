@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import FlashcardList from "./FlashcardList";
-import "../styles/Flashcards.css"
+import "../../styles/Flashcards.css"
 import axios from 'axios';
 
 function Flashcards(){
@@ -72,7 +72,7 @@ function Flashcards(){
             </form>
 
             <div className="card-container">
-                <FlashcardList flashcards={flashcards}/>
+                <FlashcardList flashcards={ flashcards }/>
             </div>
         </>
     );

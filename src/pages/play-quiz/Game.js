@@ -65,7 +65,7 @@ function Game({ quizData }) {
         pageContent = (
             <EndScreen
                 score={ score }
-                bestScore={ 0 }
+                bestScore={ triviaIndex + 1 }
                 onRetryClick={ restartGame }
                 playTime={ playTimeInSeconds }
             />

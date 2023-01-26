@@ -1,8 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 html {
   /* Create a base font size that is inherited for elements on the page. */
-  font-size: 22px;
+  font-size: 20px;
   /* Ditto for the font-family. */
   font-family: "PT Sans", sans-serif;
 }
@@ -13,10 +12,8 @@ default. */
   font-family: inherit;
 }
 
-body {
+body{
   background: url("assets/images/memphis-colorful-dim.png");
-  color: rgb(4, 0, 17);
-  max-width: 800px;
   margin: 0 auto;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',

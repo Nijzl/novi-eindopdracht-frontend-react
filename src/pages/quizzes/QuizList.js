@@ -1,8 +1,8 @@
-import "../styles/QuizList.css";
-import LoadingSpinner from "../components/LoadingSpinner";
-import ErrorMessage from "../components/ErrorMessage";
+import "../../styles/QuizList.css";
+import LoadingSpinner from "../../components/LoadingSpinner";
+import ErrorMessage from "../../components/ErrorMessage";
 import QuizPreview from "./QuizPreview";
-import useQuizzesOnce from "../data/hooks/use-quizzes-once";
+import useQuizzesOnce from "../../data/hooks/use-quizzes-once";
 
 function QuizList() {
 

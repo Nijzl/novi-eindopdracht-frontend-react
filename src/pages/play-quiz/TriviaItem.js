@@ -1,9 +1,9 @@
-import "../styles/TriviaItem.css";
-import shuffle from "../components/utils/shuffle";
+import "../../styles/TriviaItem.css";
+import shuffle from "../../components/utils/shuffle";
 import { useState } from "react";
 import useSound from "use-sound";
-import correctSound from "../assets/sfx/sound-correct.wav";
-import incorrectSound from "../assets/sfx/sound-wrong.wav";
+import correctSound from "../../assets/sfx/sound-correct.wav";
+import incorrectSound from "../../assets/sfx/sound-wrong.wav";
 
 function TriviaItem({
                         correctAnswer,
@@ -39,7 +39,7 @@ function TriviaItem({
             <p className="trivia-item__difficulty">Difficulty: {difficulty}</p>
             <p className="trivia-item__question">{question}</p>
             <ul className="trivia-item__answers">
-                {shuffledAnswers.map((answer, i) => {
+                { shuffledAnswers.map((answer, i) => {
 
                     let className = "trivia-item__button";
 
