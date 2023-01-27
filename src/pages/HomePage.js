@@ -1,7 +1,10 @@
-import ErrorMessage from "../components/ErrorMessage";
+import ErrorMessage from "../components/common/ErrorMessage";
 import useUser from "../data/hooks/use-user";
 import { Link } from "react-router-dom";
 import "../styles/HomePage.css";
+import CreateNewUser from "../data/user/create-new-user";
+import UseUser from "../data/hooks/use-user";
+import user from "../data/user/user";
 
 function HomePage() {
 
@@ -12,7 +15,7 @@ function HomePage() {
         contents = (
             <>
 
-                <p> You are now signed in </p>
+                <p> You are now signed in <br/> <i className="fa-solid fa-book-open-reader"/> </p>
                 <p> What would you like to do? </p>
 
                 <div className="button-column">
@@ -48,7 +51,12 @@ function HomePage() {
                     <p> TriviApp lets you practice your trivia skills: </p>
                     <p> Generate a unique quiz,<br/> select an existing quiz from our database, <br/> or learn more about a specific topic through flashcards </p>
                     <h1> <i className="fa-solid fa-book-atlas"/> </h1>
-                    <p> Sign in with your Google account to get started! </p>
+{/*                    <Link to="/register">
+                        <h1> REGISTER </h1>
+                    </Link>
+                    <h1> Login with email and password</h1>
+                    <p> Or </p>*/}
+                    <p> Sign in with your Google account </p>
                     <div className="button-log">
                         <button className="home-page__button" onClick={ userState.signIn } disabled={ userState.isLoading }>
                             { userState.isLoading ? "SIGNING IN..." : "SIGN IN" }

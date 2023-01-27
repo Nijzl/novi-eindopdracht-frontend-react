@@ -1,10 +1,10 @@
 import { useParams } from "react-router-dom";
 import { useState } from "react";
-import { getNewQuizId, getServerTimestamp } from "../data/Firebase";
-import useQuizOnce from "../data/hooks/use-quiz-once";
-import useUser from "../data/hooks/use-user";
+import { getNewQuizId, getServerTimestamp } from "../../data/Firebase";
+import useQuizOnce from "../../data/hooks/use-quiz-once";
+import useUser from "../../data/hooks/use-user";
 import QuizForm from "./QuizForm";
-import LoadingSpinner from "../components/LoadingSpinner";
+import LoadingSpinner from "../common/LoadingSpinner";
 
 function EditQuizPage() {
 

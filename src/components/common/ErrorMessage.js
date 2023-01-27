@@ -1,4 +1,4 @@
-import "../styles/ErrorMessage.css";
+import "../../styles/ErrorMessage.css";
 
 function ErrorMessage({ children }) {
     return <p className="error-message">{ children }</p>;

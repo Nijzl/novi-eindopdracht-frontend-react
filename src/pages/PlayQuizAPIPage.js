@@ -1,7 +1,7 @@
-import GameAPI from "./GameAPI";
-import LoadingSpinner from "../../components/LoadingSpinner";
-import ErrorMessage from "../../components/ErrorMessage";
-import useGetTriviaData from "../../components/hooks/use-get-trivia-data";
+import GameAPI from "../components/play-quiz/GameAPI";
+import LoadingSpinner from "../components/common/LoadingSpinner";
+import ErrorMessage from "../components/common/ErrorMessage";
+import useGetTriviaData from "../components/hooks/use-get-trivia-data";
 
 function PlayQuizAPIPage() {
 

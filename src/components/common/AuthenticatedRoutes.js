@@ -1,5 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
-import UseUser from "../data/hooks/use-user";
+import UseUser from "../../data/hooks/use-user";
 
 function NotLoggedInContent() {
     return (

@@ -24,7 +24,6 @@ async function fetchJson(url) {
     return json;
 }
 
-/* CUSTOM HOOK */
 function useGetTriviaData(amount= 10, difficulty= ""){
 
     const [quizFetch, setQuizFetch] = useState({

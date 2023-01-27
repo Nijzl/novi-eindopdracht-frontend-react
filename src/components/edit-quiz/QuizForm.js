@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Form, SelectInput, TextInput } from "../components/FormComponents.js";
-import "../styles/QuizForm.css";
+import { Form, SelectInput, TextInput } from "../common/FormComponents.js";
+import "../../styles/QuizForm.css";
 
 const difficultyOptions = [
     { value: "easy", label: "Easy" },

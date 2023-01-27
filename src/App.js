@@ -1,18 +1,18 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import PlayQuizAPIPage from "./pages/play-quiz/PlayQuizAPIPage";
-import DemoPage from "./pages/DemoPage";
+import PlayQuizAPIPage from "./pages/PlayQuizAPIPage";
 import HomePage from "./pages/HomePage";
-import Footer from "./components/Footer";
+import Footer from "./components/common/Footer";
 import PageNotFound from "./pages/PageNotFound";
 import useUser, { UserProvider } from "./data/hooks/use-user";
-import LoadingSpinner from "./components/LoadingSpinner";
-import QuizzesPage from "./pages/quizzes/QuizzesPage";
-import PlayQuizPage from "./pages/play-quiz/PlayQuizPage";
-import AuthenticatedRoutes from "./components/AuthenticatedRoutes";
-import EditQuizPage from "./edit-quiz/EditQuizPage";
-import Flashcards from "./pages/flashcards/Flashcards";
-import Navbar from "./components/Navbar";
+import LoadingSpinner from "./components/common/LoadingSpinner";
+import QuizzesPage from "./pages/QuizzesPage";
+import PlayQuizPage from "./pages/PlayQuizPage";
+import AuthenticatedRoutes from "./components/common/AuthenticatedRoutes";
+import Flashcards from "./pages/Flashcards";
+import Navbar from "./components/common/Navbar";
+import CreateNewUser from "./data/user/create-new-user";
+import CreateUserPage from "./pages/CreateUserPage";
 
 function ProviderWrappedApp() {
     return (
@@ -38,6 +38,7 @@ function App() {
               ) : (
                   <Routes>
                       <Route path="/" exact element={ <HomePage/> } />
+                      <Route path="/register" element={ <CreateUserPage/> } />
                       <Route path="/quizzes" element={ <QuizzesPage/> } />
                       <Route element={ <AuthenticatedRoutes/> }>
                           <Route path="/quizzes/play-quiz/:id" element={ <PlayQuizPage/> } />
@@ -49,7 +50,6 @@ function App() {
                             <Route path="/api" element={ <PlayQuizAPIPage/> } />
                       </Route>
                       <Route path="/flashcards" element={ <Flashcards/> } />
-                      <Route path="/demo" element={ <DemoPage/> } />
                       <Route path="*" element={ <PageNotFound/> } />
                   </Routes>
               )}

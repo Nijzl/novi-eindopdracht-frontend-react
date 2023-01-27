@@ -1,5 +1,5 @@
 import { useEffect, useState, createContext, useContext } from "react";
-import { auth, provider } from "../Firebase";
+import {auth, emailprovider, provider} from "../Firebase";
 
 function useUserInternal() {
     const [userState, setUserState] = useState({

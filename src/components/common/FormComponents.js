@@ -1,4 +1,4 @@
-import "../styles/FormComponents.css";
+import "../../styles/FormComponents.css";
 
 /* DISABLE FORM ON SUBMIT */
 function Form({ onSubmit, disabled, children }) {

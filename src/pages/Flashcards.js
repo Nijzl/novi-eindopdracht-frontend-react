@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
-import FlashcardList from "./FlashcardList";
-import "../../styles/Flashcards.css"
 import axios from 'axios';
+import FlashcardList from "../components/flashcards/FlashcardList";
+import "../styles/Flashcards.css"
 
 function Flashcards(){
 

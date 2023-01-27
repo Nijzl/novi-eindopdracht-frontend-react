@@ -1,6 +1,6 @@
 import "../../styles/QuizList.css";
-import LoadingSpinner from "../../components/LoadingSpinner";
-import ErrorMessage from "../../components/ErrorMessage";
+import LoadingSpinner from "../common/LoadingSpinner";
+import ErrorMessage from "../common/ErrorMessage";
 import QuizPreview from "./QuizPreview";
 import useQuizzesOnce from "../../data/hooks/use-quizzes-once";
 

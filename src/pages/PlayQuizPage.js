@@ -1,8 +1,8 @@
-import Game from "./Game";
-import LoadingSpinner from "../../components/LoadingSpinner";
-import ErrorMessage from "../../components/ErrorMessage";
 import { useParams } from "react-router-dom";
-import useQuizOnce from "../../data/hooks/use-quiz-once";
+import Game from "../components/play-quiz/Game";
+import LoadingSpinner from "../components/common/LoadingSpinner";
+import ErrorMessage from "../components/common/ErrorMessage";
+import useQuizOnce from "../data/hooks/use-quiz-once";
 
 function PlayQuizPage() {
 

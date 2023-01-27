@@ -2,14 +2,14 @@ import { useState } from "react";
 import { db } from "../Firebase";
 
 function CreateNewUser() {
-    const [firstName, setFirstName] = useState("");
-    const [lastName, setLastName] = useState("");
+    const [userName, setUserName] = useState("");
+    const [password, setPassword] = useState("");
 
     const onClick = async () => {
         try {
             const docRef = await db.collection("users").add({
-                firstName,
-                lastName,
+                userName,
+                password,
                 isOnline: true,
                 highScore: 0,
                 topics: [],
@@ -22,20 +22,22 @@ function CreateNewUser() {
     };
 
     return (
-        <div>
-            <h3> Create User </h3>
-            <div>
+        <div className="create-new-user-container">
+            <h1> REGISTER </h1>
+            <div className="create-new-user-input">
                 <label>
-                    First name:{ " " }
-                    <input type="text" value={ firstName } placeholder="Your name" onChange={ (e) => setFirstName(e.target.value) }/>
-                </label>
-                <label>
-                    Last name:{ " " }
-                    <input type="text" value={ lastName } placeholder="Your surname" onChange={ (e) => setLastName(e.target.value) }/>
+                    Username:{ " " }
+                    <input type="text" value={ userName } placeholder="Your username" onChange={ (e) => setUserName(e.target.value) }/>
                 </label>
             </div>
-            <div>
-                <button onClick={ onClick }> Create User </button>
+            <div className="create-new-user-input">
+                <label>
+                    Password:{ " " }
+                    <input type="password" value={ password } placeholder="Your password" onChange={ (e) => setPassword(e.target.value) }/>
+                </label>
+            </div>
+            <div className="create-new-user-btn">
+                <button onClick={ onClick }> REGISTER </button>
             </div>
         </div>
     );

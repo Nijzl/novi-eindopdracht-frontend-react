@@ -1,5 +1,5 @@
 import "../../styles/StartScreen.css";
-import ErrorMessage from "../../components/ErrorMessage";
+import ErrorMessage from "../common/ErrorMessage";
 
 function StartScreen({ quizData, onPlayClick }) {
     let { title, tags, description, difficulty, ownerName, questions, lastModifiedAt } = quizData;
