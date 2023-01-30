@@ -4,7 +4,7 @@ import EndScreen from "./EndScreen";
 import { useState } from "react";
 import { FadeTransition, FadeWrapper } from "./fade-transition";
 
-function Game({ triviaData }) {
+function GameAPI({ triviaData }) {
 
     const [gameState, setGameState] = useState({
         score: 0,
@@ -87,4 +87,4 @@ function Game({ triviaData }) {
     );
 }
 
-export default Game;
+export default GameAPI;

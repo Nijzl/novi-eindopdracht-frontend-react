@@ -51,11 +51,6 @@ function HomePage() {
                     <p> TriviApp lets you practice your trivia skills: </p>
                     <p> Generate a unique quiz,<br/> select an existing quiz from our database, <br/> or learn more about a specific topic through flashcards </p>
                     <h1> <i className="fa-solid fa-book-atlas"/> </h1>
-{/*                    <Link to="/register">
-                        <h1> REGISTER </h1>
-                    </Link>
-                    <h1> Login with email and password</h1>
-                    <p> Or </p>*/}
                     <p> Sign in with your Google account </p>
                     <div className="button-log">
                         <button className="home-page__button" onClick={ userState.signIn } disabled={ userState.isLoading }>
