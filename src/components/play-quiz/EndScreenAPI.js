@@ -41,6 +41,9 @@ function EndScreen({ score, bestScore, onRetryClick, playTime }) {
                 <button className="end-screen__button" onClick={ onRetryClick }>
                     RETRY QUIZ
                 </button>
+                <button className="end-screen__button" onClick={ refreshPage }>
+                    FRESH QUIZ
+                </button>
                 <Link to="/">
                     <button className="end-screen__button"> HOME </button>
                 </Link>

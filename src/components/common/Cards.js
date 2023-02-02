@@ -1,6 +1,10 @@
 import CardItem from "./CardItem";
 import "../../styles/Cards.css";
 
+import qBubbles from "../../assets/images/questionmarks-bubbles.png";
+import qBlocks from "../../assets/images/questionmarks-blocks.png";
+import qCards from "../../assets/images/questionmarks-cards.png";
+
 function Cards() {
     return (
         <div className="cards">
@@ -9,19 +13,19 @@ function Cards() {
                 <div className="cards__wrapper">
                     <ul className="cards__items">
                         <CardItem
-                            src="../assets/images/questionmarks-bubbles.png"
+                            src={ qBubbles }
                             text="Play a game from our quiz list"
                             label="QUIZ LIST"
                             path="/quizzes"
                         />
                         <CardItem
-                            src="../assets/images/questionmarks-blocks.png"
+                            src={ qBlocks }
                             text="Generate a unique quiz"
                             label="API QUIZ"
                             path="/api"
                         />
                         <CardItem
-                            src="../assets/images/questionmarks-cards.png"
+                            src={ qCards }
                             text="Practice your skills through low-stakes flashcards"
                             label="FLASHCARDS"
                             path="/flashcards"

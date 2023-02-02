@@ -1,6 +1,6 @@
 import Stats from "./Stats";
 import TriviaItem from "./TriviaItem";
-import EndScreen from "./EndScreen";
+import EndScreenAPI from "./EndScreenAPI";
 import { useState } from "react";
 import { FadeTransition, FadeWrapper } from "./fade-transition";
 
@@ -50,7 +50,7 @@ function GameAPI({ triviaData }) {
     if (isGameOver) {
         pageKey = "EndScreen";
         pageContent = (
-            <EndScreen
+            <EndScreenAPI
                 score={ score }
                 bestScore={ triviaIndex + 1 }
                 onRetryClick={ restartGame }

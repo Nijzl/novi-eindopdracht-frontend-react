@@ -1,4 +1,13 @@
-# Getting Started with Create React App
+# Novi Frontend Integrale Eindopdracht
+
+Lotte Nijzink <br/>
+900100886
+
+## GitHub Link
+
+The GitHub link to this project: https://github.com/Nijzl/novi-eindopdracht-frontend-react
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
