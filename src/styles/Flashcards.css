@@ -66,7 +66,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url('../assets/images/game-header.png');
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url("../assets/images/questionmarks-cards.png");
     box-shadow: 0 0 5px 2px rgba(0, 0, 0, .3);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;

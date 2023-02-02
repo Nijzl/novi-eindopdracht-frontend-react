@@ -1,10 +1,9 @@
 import ErrorMessage from "../components/common/ErrorMessage";
 import useUser from "../data/hooks/use-user";
 import { Link } from "react-router-dom";
+import HeroSection from "../components/common/HeroSection";
 import "../styles/HomePage.css";
-import CreateNewUser from "../data/user/create-new-user";
-import UseUser from "../data/hooks/use-user";
-import user from "../data/user/user";
+import Cards from "../components/common/Cards";
 
 function HomePage() {
 
@@ -14,28 +13,26 @@ function HomePage() {
     if (userState.isSignedIn) {
         contents = (
             <>
+                <HeroSection/>
+                <Cards/>
 
-                <p> You are now signed in <br/> <i className="fa-solid fa-book-open-reader"/> </p>
+{/*                <p> You are now signed in <br/> <i className="fa-solid fa-book-open-reader"/> </p>
                 <p> What would you like to do? </p>
 
                 <div className="button-column">
                     <Link to="/api">
                         <button className="home-page__button"> GENERATE QUIZ </button>
                     </Link>
-                </div>
-                <div className="button-column">
                     <Link to="/quizzes">
                         <button className="home-page__button"> QUIZZES LIST </button>
                     </Link>
-                </div>
-                <div className="button-column">
                     <Link to="/flashcards">
                         <button className="home-page__button"> FLASHCARDS </button>
                     </Link>
-                </div>
+                </div>*/}
 
                 <div className="home-page-log">
-                    <p> Done for today? </p>
+                    <h2> Done for now? </h2>
                     <div className="button-log">
                         <button className="home-page__button" onClick={ userState.signOut } disabled={ userState.isLoading }>
                             { userState.isLoading ? "SIGNING OUT..." : "SIGN OUT" }
@@ -48,6 +45,8 @@ function HomePage() {
         contents = (
             <>
                 <div className="home-page-log">
+                    <h1> Welcome to TriviApp <i className="fa-solid fa-swatchbook"/> </h1>
+                    <h2> Expand your knowledge </h2>
                     <p> TriviApp lets you practice your trivia skills: </p>
                     <p> Generate a unique quiz,<br/> select an existing quiz from our database, <br/> or learn more about a specific topic through flashcards </p>
                     <h1> <i className="fa-solid fa-book-atlas"/> </h1>
@@ -65,9 +64,6 @@ function HomePage() {
 
     return (
         <div>
-{/*            <h1> Welcome to Qui⚡︎⚡︎app </h1>*/}
-            <h1> Welcome to TriviApp <i className="fa-solid fa-swatchbook"/> </h1>
-            <h2> Expand your knowledge </h2>
             { userState.error && (
                 <ErrorMessage> Something went wrong logging you in. Please try again. </ErrorMessage>
             )}

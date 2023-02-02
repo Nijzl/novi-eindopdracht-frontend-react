@@ -11,6 +11,10 @@ function EndStat({ label, value }) {
     );
 }
 
+function refreshPage(){
+    window.location.reload();
+}
+
 function EndScreen({ score, bestScore, onRetryClick, playTime }) {
     const minutes = `${ Math.floor(playTime / 60) }`.padStart(2, "0");
     const seconds = `${ Math.floor(playTime % 60) }`.padStart(2, "0");
@@ -35,10 +39,11 @@ function EndScreen({ score, bestScore, onRetryClick, playTime }) {
 
             <div>
                 <button className="end-screen__button" onClick={ onRetryClick }>
-                    RETRY
+                    RETRY QUIZ
                 </button>
-            </div>
-            <div>
+                <button className="end-screen__button" onClick={ refreshPage }>
+                    FRESH QUIZ
+                </button>
                 <Link to="/">
                     <button className="end-screen__button"> HOME </button>
                 </Link>
