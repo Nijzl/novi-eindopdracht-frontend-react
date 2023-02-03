@@ -2,7 +2,7 @@ import Stats from "./Stats";
 import TriviaItem from "./TriviaItem";
 import EndScreenAPI from "./EndScreenAPI";
 import { useState } from "react";
-import { FadeTransition, FadeWrapper } from "./fade-transition";
+import { FadeTransition, FadeWrapper } from "../utils/fade-transition";
 
 function GameAPI({ triviaData }) {
 
@@ -31,7 +31,7 @@ function GameAPI({ triviaData }) {
         if (triviaIndex >= triviaData.length - 1) {
             setGameState({ ...gameState, isGameOver: true });
         } else {
-            // Using the spread operator to copy the gameState and override the triviaIndex.
+            // Using spread operator to copy gameState and override triviaIndex
             setGameState({ ...gameState, triviaIndex: triviaIndex + 1 });
         }
     };

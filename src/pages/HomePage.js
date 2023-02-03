@@ -1,6 +1,5 @@
 import ErrorMessage from "../components/common/ErrorMessage";
 import useUser from "../data/hooks/use-user";
-import { Link } from "react-router-dom";
 import HeroSection from "../components/common/HeroSection";
 import "../styles/HomePage.css";
 import Cards from "../components/common/Cards";
@@ -15,21 +14,6 @@ function HomePage() {
             <>
                 <HeroSection/>
                 <Cards/>
-
-{/*                <p> You are now signed in <br/> <i className="fa-solid fa-book-open-reader"/> </p>
-                <p> What would you like to do? </p>
-
-                <div className="button-column">
-                    <Link to="/api">
-                        <button className="home-page__button"> GENERATE QUIZ </button>
-                    </Link>
-                    <Link to="/quizzes">
-                        <button className="home-page__button"> QUIZZES LIST </button>
-                    </Link>
-                    <Link to="/flashcards">
-                        <button className="home-page__button"> FLASHCARDS </button>
-                    </Link>
-                </div>*/}
 
                 <div className="home-page-log">
                     <h2> Done for now? </h2>

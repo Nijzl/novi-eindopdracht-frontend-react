@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FadeTransition, FadeWrapper } from "./fade-transition";
+import { FadeTransition, FadeWrapper } from "../utils/fade-transition";
 import Stats from "./Stats";
 import TriviaItem from "./TriviaItem";
 import EndScreen from "./EndScreen";
